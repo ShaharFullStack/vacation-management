@@ -52,6 +52,7 @@ Before you begin, ensure you have:
 ### 🔧 Installation
 
 #### Backend Setup
+<<<<<<< HEAD
 ```bash
 # Clone the repository
 git clone https://github.com/ShaharFullStack/vacation-management.git
@@ -63,10 +64,29 @@ cd backend
 npm install
 
 # Start the server
+=======
+# Clone the repository
+```bash
+git clone https://github.com/ShaharFullStack/vacation-management.git
+```
+# Navigate to backend
+```bash
+cd Backend
+```
+
+# Install dependencies with superpowers! 🦸‍♂️
+```bash
+npm install
+```
+
+# Start the server
+```bash
+>>>>>>> c44c792051ea7c4c2a57adf6020c36918c6ecb98
 npm start
 ```
 
 #### Frontend Magic ✨
+<<<<<<< HEAD
 ```bash
 # Navigate to frontend
 cd frontend
@@ -75,6 +95,20 @@ cd frontend
 npm install
 
 # Launch the application
+=======
+# Navigate to frontend
+```bash
+cd Frontend
+```
+
+# Install dependencies
+```bash
+npm install
+```
+
+# Launch the application
+```bash
+>>>>>>> c44c792051ea7c4c2a57adf6020c36918c6ecb98
 npm start
 ```
 
@@ -142,8 +176,14 @@ Questions? Ideas? Get in touch!
 
 <div align="center">
 
+<<<<<<< HEAD
 🌟 **Star us on GitHub if you find this useful!** 🌟
 
 Made with ❤️ by the Vacation Management Team
+=======
+🌟 **Star me on GitHub if you find this useful!** 🌟
+
+Made with by Shahar Maoz
+>>>>>>> c44c792051ea7c4c2a57adf6020c36918c6ecb98
 
 </div>
