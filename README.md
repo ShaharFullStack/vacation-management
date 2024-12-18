@@ -5,185 +5,89 @@
 [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
 [![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
 
-> Transform your vacation management experience with our modern, full-stack solution! Track bookings, analyze trends, and generate insightful reports - all in one place. 🚀
 
-## ✨ Features
+# Vacation Management
 
-- 🔐 **Secure Authentication** - JWT-based user authentication system
-- 👥 **Role-Based Access** - Separate interfaces for admins and users
-- 📊 **Dynamic Reports** - Export data in CSV and XML formats
-- ❤️ **Social Features** - Like and track popular destinations
-- 📱 **Responsive Design** - Seamless experience across all devices
-- 🎯 **Real-time Updates** - Instant reflection of changes
+This is a vacation management system that provides functionalities to manage vacations for users. It includes features for user authentication, vacation liking, reporting, and more.
 
-## 🏗️ Project Structure
+## Project Structure
 
-```
-Vacation-Management-Project/
-├── 🔧 backend/
-│   ├── src/
-│   │   ├── 🎮 controllers/   # Route handlers
-│   │   ├── 📝 models/        # Data schemas
-│   │   ├── ⚙️ services/      # Business logic
-│   │   ├── 🔒 middleware/    # Security layers
-│   │   ├── 🛠️ utils/         # Helper functions
-│   │   └── 🧪 tests/         # Testing suite
-│   ├── 📱 app.ts            # Main application
-│   └── 📦 package.json      # Dependencies
-│
-├── 🎨 frontend/
-│   ├── src/
-│   │   ├── 🧩 components/   # UI building blocks
-│   │   ├── 📄 pages/        # Route pages
-│   │   └── 🔧 utils/        # Helper tools
-│   ├── 🎯 App.tsx          # Root component
-│   └── 📦 package.json     # Dependencies
-```
+The project is divided into three main parts:
+- **Frontend**: A React-based application for the user interface.
+- **Backend**: A Node.js server with TypeScript providing the API and business logic.
+- **Database**: Includes SQL scripts for database initialization.
 
-## 🚀 Quick Start
+## Technologies Used
 
-### Prerequisites
+- **Frontend**: React, TypeScript, Redux
+- **Backend**: Node.js, TypeScript, Express
+- **Database**: MySQL
+- **Containerization**: Docker
 
-Before you begin, ensure you have:
-- 📦 Node.js (Latest LTS version)
-- 🗄️ MySQL Database
-- 🔑 Environment configuration ready
+## Features
 
-### 🔧 Installation
+- User authentication and role-based access control.
+- Vacation management: Add, edit, delete, and view vacations.
+- Like vacations and view reports.
+- Responsive and user-friendly interface.
 
-#### Backend Setup
-<<<<<<< HEAD
-```bash
-# Clone the repository
-git clone https://github.com/ShaharFullStack/vacation-management.git
+## Installation
 
-# Navigate to backend
-cd backend
+### Run with Docker
 
-# Install dependencies with superpowers! 🦸‍♂️
-npm install
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ShaharFullStack/vacation-management.git
+   ```
 
-# Start the server
-=======
-# Clone the repository
-```bash
-git clone https://github.com/ShaharFullStack/vacation-management.git
-```
-# Navigate to backend
-```bash
-cd Backend
-```
+2. Navigate to the project directory:
+   ```bash
+   cd vacation-management
+   ```
 
-# Install dependencies with superpowers! 🦸‍♂️
-```bash
-npm install
-```
+3. Build and run the application using Docker Compose:
+   ```bash
+   docker-compose up --build
+   ```
 
-# Start the server
-```bash
->>>>>>> c44c792051ea7c4c2a57adf6020c36918c6ecb98
-npm start
-```
+### Run Manually
 
-#### Frontend Magic ✨
-<<<<<<< HEAD
-```bash
-# Navigate to frontend
-cd frontend
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ShaharFullStack/vacation-management.git
+   ```
 
-# Install dependencies
-npm install
+2. Navigate to the project directory:
+   ```bash
+   cd vacation-management
+   ```
 
-# Launch the application
-=======
-# Navigate to frontend
-```bash
-cd Frontend
-```
+3. Install dependencies for both frontend and backend:
+   ```bash
+   cd Backend
+   npm install
+   cd ../Frontend
+   npm install
+   ```
 
-# Install dependencies
-```bash
-npm install
-```
+4. Set up the database using the SQL scripts in the `Database` folder.
 
-# Launch the application
-```bash
->>>>>>> c44c792051ea7c4c2a57adf6020c36918c6ecb98
-npm start
-```
+5. Start the development servers:
+   - Backend:
+     ```bash
+     cd Backend
+     npm run start
+     ```
+   - Frontend:
+     ```bash
+     cd Frontend
+     npm start
+     ```
 
-## 🔌 API Endpoints
+## License
 
-### 🔐 Authentication
-- `POST /api/register` - Join the vacation club! 🎉
-- `POST /api/login` - Get your magic token! ✨
-
-### 🏖️ Vacation Management
-- `GET /api/vacations` - Discover amazing destinations
-- `POST /api/vacations` - Create new vacation dreams
-- `PUT /api/vacations/:id` - Update your paradise
-- `DELETE /api/vacations/:id` - Retire a destination
-
-### ❤️ Social Features
-- `POST /api/vacations/:id/likes` - Show some love!
-- `GET /api/likes/report` - Track the trending spots
-- `GET /api/likes/report/csv` - Export for spreadsheet wizards
-- `GET /api/likes/report/xml` - Data for the XML enthusiasts
-
-## 🛠️ Tech Stack
-
-### Backend Powerhouse
-- ⚡ Node.js + Express.js - Lightning-fast server
-- 📘 TypeScript - Type-safe development
-- 🗄️ MySQL - Rock-solid database
-- 🔐 JWT - Secure authentication
-
-### Frontend Magic
-- ⚛️ React.js - UI components
-- 🎨 Modern CSS - Beautiful styling
-- 📱 Responsive Design - Mobile-first approach
-
-## 🧪 Quality Assurance
-
-```bash
-# Run the test suite
-npm test
-
-# Watch for changes
-npm run test:watch
-```
-
-## 📊 Reports
-
-Generate beautiful reports in multiple formats:
-- 📑 CSV - For the spreadsheet lovers
-
-## 🤝 Contributing
-
-I appericiate contributions! Here's how you can help:
-1. 🍴 Fork the repository
-2. 🌿 Create your feature branch
-3. 💫 Make your changes
-4. 🚀 Submit a pull request
-
-## 📫 Contact
-
-Questions? Ideas? Get in touch!
-- 👨‍💻 **Developer**: Shahar Maoz
-- 📧 **Email**: [rakloze@gmail.com](mailto:rakloze@gmail.com)
+This project is licensed under the MIT License. See the LICENSE file for details.
 
 ---
 
-<div align="center">
-
-<<<<<<< HEAD
-🌟 **Star us on GitHub if you find this useful!** 🌟
-
-Made with ❤️ by the Vacation Management Team
-=======
-🌟 **Star me on GitHub if you find this useful!** 🌟
-
-Made with by Shahar Maoz
->>>>>>> c44c792051ea7c4c2a57adf6020c36918c6ecb98
-
-</div>
+Developed by Shahar Maoz.
