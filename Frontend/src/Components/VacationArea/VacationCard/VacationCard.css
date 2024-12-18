@@ -1,0 +1,202 @@
+.vacation-card {
+    display: inline-block;
+    position: relative;
+    width: 320px;
+    background: rgba(14, 16, 38, 0.8);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 240, 255, 0.1),
+                0 4px 30px rgba(57, 255, 20, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 20px;
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+
+/* Indicators Container */
+.vacation-indicators {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 8px;
+    z-index: 2;
+}
+
+.indicator {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    animation: fadeIn 0.3s ease-out;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.indicator.upcoming {
+    background: rgba(255, 166, 0, 0.2);
+    color: #ffa600;
+    border: 1px solid rgba(255, 166, 0, 0.4);
+}
+
+.indicator.active {
+    background: rgba(55, 255, 20, 0.285);
+    color: #39ff14;
+    border: 1px solid rgba(55, 255, 20, 0.471);
+}
+
+/* Hover effects */
+.vacation-card:hover .indicator {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+}
+
+.indicator.upcoming:hover {
+    background: rgba(255, 166, 0, 0.3);
+    box-shadow: 0 0 15px rgba(255, 166, 0, 0.3);
+}
+
+.indicator.active:hover {
+    background: rgba(57, 255, 20, 0.3);
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.3);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.vacation-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 240, 255, 0.4),
+                0 8px 60px rgba(57, 255, 20, 0.2);
+}
+
+.vacation-card.exiting {
+    animation: cardExit 0.5s ease-in forwards;
+    pointer-events: none;
+}
+
+@keyframes cardExit {
+    0% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.7) translateY(-20px);
+        opacity: 0;
+    }
+}
+
+/* Rest of the CSS remains the same */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.vacation-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.vacation-card:hover .vacation-image {
+    transform: scale(1.1);
+}
+
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+    pointer-events: none;
+}
+
+.like-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.like-button:hover {
+    transform: scale(1.2);
+    background: white;
+}
+
+.like-button.liked {
+    color: #ff1e56;
+    animation: heart-pop 0.4s ease;
+}
+
+/* Cards Container */
+.vacations-container {
+    position: relative;
+    z-index: var(--z-base);
+}
+
+.vacation-card {
+    position: relative;
+    z-index: var(--z-cards);
+}
+
+
+@keyframes heart-pop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.vacation-title {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #00f0ff;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+.vacation-price {
+    font-size: 1.2rem;
+    color: #39ff14;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.vacation-dates {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #b0bec5;
+}

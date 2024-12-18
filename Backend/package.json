@@ -1,0 +1,52 @@
+{
+    "name": "shahar-travles-backend",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "nodemon --legacy-watch --exec ts-node src/app.ts --quiet",
+        "test": "mocha --require ts-node/register tests/**/*.test.ts --exit",
+        "clean": "rimraf dist"
+    },
+    "keywords": [],
+    "author": "Shahar Maoz",
+    "license": "ISC",
+    "description": "This app was created by Shahar Maoz",
+    "devDependencies": {
+        "@types/chai": "^5.0.1",
+        "@types/cors": "^2.8.17",
+        "@types/express": "^4.17.21",
+        "@types/express-fileupload": "^1.5.1",
+        "@types/jest": "^29.5.14",
+        "@types/jsonwebtoken": "^9.0.7",
+        "@types/mocha": "^10.0.10",
+        "@types/node": "^22.10.2",
+        "@types/supertest": "^6.0.2",
+        "@types/uuid": "^10.0.0",
+        "chai": "^4.5.0",
+        "mocha": "^10.8.2",
+        "rimraf": "^6.0.1",
+        "supertest": "^7.0.0",
+        "ts-node": "^10.9.2"
+    },
+    "dependencies": {
+        "@types/express-rate-limit": "^6.0.0",
+        "body-parser": "^1.20.3",
+        "cors": "^2.8.5",
+        "dayjs": "^1.11.13",
+        "dotenv": "^16.4.5",
+        "exceljs": "^4.4.0",
+        "express": "^4.21.2",
+        "express-fileupload": "^1.5.1",
+        "express-rate-limit": "^7.4.0",
+        "helmet": "^8.0.0",
+        "joi": "^17.13.3",
+        "jsonwebtoken": "^9.0.2",
+        "mysql2": "^3.11.3",
+        "striptags": "^3.2.0",
+        "uploaded-file-saver": "^1.0.1",
+        "xlsx": "^0.18.5"
+    },
+    "main": "index.js",
+    "directories": {
+        "test": "tests"
+    }
+}

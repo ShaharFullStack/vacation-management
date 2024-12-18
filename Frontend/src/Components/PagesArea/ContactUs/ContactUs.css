@@ -1,0 +1,64 @@
+.ContactUs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.ContactUs form {
+    width: 40%;
+    background: rgba(14, 16, 38, 0.95);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 240, 255, 0.2),
+                0 4px 30px rgba(57, 255, 20, 0.1);
+    transition: all 0.3s;
+}
+
+.ContactUs .MuiInputBase-root {
+    color: #ffffff;
+    background-color: rgba(14, 16, 38, 0.8);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: inset 0 2px 5px rgba(0, 240, 255, 0.2);
+}
+
+.ContactUs .MuiInputLabel-root {
+    color: #b0bec5;
+}
+
+.ContactUs .MuiInputLabel-root.Mui-focused {
+    color: #00f0ff;
+}
+
+.ContactUs .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(0, 240, 255, 0.4);
+}
+
+.ContactUs .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(0, 240, 255, 0.8);
+}
+
+.ContactUs .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(57, 255, 20, 0.9);
+}
+
+.ContactUs button {
+    background: linear-gradient(90deg, rgba(0, 240, 255, 1), rgba(57, 255, 20, 0.8));
+    color: #ffffff !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    padding: 15px 0 !important;
+    border-radius: 30px !important;
+    box-shadow: 0 4px 15px rgba(0, 240, 255, 0.4),
+                0 4px 30px rgba(57, 255, 20, 0.2);
+    transition: all 0.3s ease !important;
+}
+
+.ContactUs button:hover {
+    background: linear-gradient(90deg, rgba(57, 255, 20, 1), rgba(0, 240, 255, 0.8));
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 240, 255, 0.6),
+                0 8px 60px rgba(57, 255, 20, 0.4);
+}

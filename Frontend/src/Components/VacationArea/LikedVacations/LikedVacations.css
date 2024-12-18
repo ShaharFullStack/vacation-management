@@ -1,0 +1,79 @@
+.LikedVacations {
+    padding: var(--spacing-xl);
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.LikedVacations h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: var(--spacing-xl);
+    color: var(--primary-light);
+    text-shadow: var(--text-shadow-lg);
+    animation: fadeIn var(--transition-normal) ease-out;
+}
+
+.liked-vacations-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+    animation: slideIn var(--transition-normal) ease-out;
+}
+
+.no-liked-vacations {
+    text-align: center;
+    font-size: clamp(2rem, 6vw, 45px);
+    color: var(--text-secondary);
+    margin-top: var(--spacing-xl);
+    opacity: 0.7;
+    animation: fadeIn var(--transition-slow) ease-out;
+    text-shadow: var(--text-shadow-sm);
+}
+
+.no-liked-vacations-message {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background: var(--bg-overlay);
+    border-radius: var(--border-radius-md);
+    backdrop-filter: var(--blur-backdrop);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .LikedVacations {
+        padding: var(--spacing-md);
+    }
+
+    .liked-vacations-container {
+        gap: var(--spacing-md);
+    }
+
+    .no-liked-vacations {
+        font-size: 2rem;
+    }
+}

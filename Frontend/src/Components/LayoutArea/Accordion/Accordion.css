@@ -1,0 +1,79 @@
+.accordion {
+    display: grid;
+    grid-template-areas: 1fr 1fr 1fr;
+    border: 1px solid #007B7F;
+    border-radius: 18px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(14, 16, 38, 0.8);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+
+.accordion-header:hover {
+    background: linear-gradient(90deg, rgba(0, 240, 255, 0.2), rgba(255, 33, 107, 0.8));
+    box-shadow: 0 8px 30px rgba(0, 240, 255, 0.6),
+                0 8px 60px rgba(57, 255, 20, 0.4);
+}
+
+.accordion-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.accordion-header span {
+    font-size: 24px;
+    transition: transform 0.6s ease;
+}
+
+/* Rotate the icon when accordion is open */
+.accordion-header.open span {
+    transform: rotate(180deg);
+}
+
+/* Accordion content with smooth height and opacity transition */
+.accordion-content-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+}
+
+.accordion-content {
+    padding: 15px;
+    background: rgba(14, 16, 38, 0.95);
+    color: #ffffff;
+
+    border-top: 1px solid #007B7F;
+}
+
+.accordion.open .accordion-content-wrapper {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.accordion.open .accordion-content-wrapper .accordion-content {
+    animation: slide-down 0.5s;
+}
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

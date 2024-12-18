@@ -1,0 +1,15 @@
+.Page404 {
+    background-image: url("../../../Assets/Images/page404.png");
+    background-size: cover;
+    height: 70vh;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+}
+.Page404 h1 {
+    font-size: 100px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}

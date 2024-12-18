@@ -1,0 +1,60 @@
+/* Register.css */
+
+.Register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    font-size: 24px;
+}
+
+.Register form {
+    padding: 30px;
+    background-color: var(--bg-secondary);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+.Register form .MuiTextField-root {
+    margin-bottom: 20px;
+}
+
+.Register form .MuiButton-root {
+    background-color: #007bff;
+    color: #ffffff;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    text-transform: none; /* Disable uppercase transformation */
+}
+
+.Register form .MuiButton-root:hover {
+    background-color: #0056b3;
+}
+
+.Register form .MuiButton-root:focus {
+    outline: none;
+    box-shadow: 0 0 10px #007bff;
+}
+.Register .MuiInputLabel-root {
+    color: #b0bec5;
+}
+
+.Register .MuiInputLabel-root.Mui-focused {
+    color: #00f0ff;
+}
+
+.Register .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(0, 240, 255, 0.4);
+}
+
+.Register .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(0, 240, 255, 0.8);
+}
+
+.Register .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(57, 255, 20, 0.9);
+}

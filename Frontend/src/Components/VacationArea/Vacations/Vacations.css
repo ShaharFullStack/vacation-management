@@ -1,0 +1,195 @@
+/* Main Container */
+.Vacations {
+    padding: var(--spacing-xl);
+    min-height: 100vh;
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+/* Search and Sort Section */
+.form-div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    background: rgba(14, 16, 38, 0.95);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-xl);
+    width: 100%;
+    max-width: 1200px;
+    backdrop-filter: var(--blur-backdrop);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0, 240, 255, 0.1);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Filter Buttons */
+.filters {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: var(--spacing-lg) 0;
+    width: 100%;
+    max-width: 1200px;
+    padding: var(--spacing-sm);
+    background: rgba(14, 16, 38, 0.8);
+    border-radius: var(--border-radius-md);
+    backdrop-filter: var(--blur-backdrop);
+}
+
+.filters button {
+    background: rgba(14, 16, 38, 0.9);
+    color: var(--text-primary);
+    border: 1px solid rgba(0, 240, 255, 0.3);
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition-normal);
+    min-width: 180px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.filters button:hover {
+    background: rgba(14, 16, 38, 0.95);
+    border-color: var(--primary-light);
+    box-shadow: 
+        0 0 15px rgba(0, 240, 255, 0.2),
+        0 0 30px rgba(57, 255, 20, 0.1);
+    transform: translateY(-2px);
+}
+
+.filters button.active {
+    background: linear-gradient(45deg, 
+        rgba(0, 240, 255, 0.15), 
+        rgba(57, 255, 20, 0.15)
+    );
+    border-color: var(--primary-light);
+    box-shadow: 
+        0 0 20px rgba(0, 240, 255, 0.3),
+        0 0 40px rgba(57, 255, 20, 0.2);
+}
+
+/* Vacations Grid */
+.vacations-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-xl);
+    width: 100%;
+    max-width: 1200px;
+}
+
+.no-vacations-message {
+    color: #ff5252;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: var(--spacing-xl);
+    animation: fadeIn var(--transition-normal) ease;
+    background: rgba(14, 16, 38, 0.9);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-xl);
+    background: rgba(14, 16, 38, 0.95);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    backdrop-filter: var(--blur-backdrop);
+    border: 1px solid rgba(0, 240, 255, 0.1);
+}
+
+.pagination button {
+    background: rgba(57, 255, 20, 0.1);
+    color: var(--text-primary);
+    border: 1px solid rgba(57, 255, 20, 0.3);
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition-normal);
+    min-width: 120px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pagination button:hover:not(:disabled) {
+    background: rgba(57, 255, 20, 0.2);
+    border-color: var(--accent-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.pagination button:disabled {
+    background: rgba(255, 0, 0, 0.1);
+    color: rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 0, 0, 0.3);
+    cursor: not-allowed;
+}
+
+.pagination span {
+    color: var(--text-secondary);
+    font-weight: bold;
+    padding: 0 var(--spacing-md);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Vacations {
+        padding: var(--spacing-sm);
+    }
+
+    .form-div {
+        padding: var(--spacing-md);
+    }
+
+    .filters {
+        flex-direction: column;
+        padding: var(--spacing-md);
+    }
+
+    .filters button {
+        width: 100%;
+        min-width: unset;
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    .pagination {
+        padding: var(--spacing-md);
+    }
+
+    .pagination button {
+        min-width: unset;
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 0.8rem;
+    }
+
+    .vacations-container {
+        grid-template-columns: 1fr;
+    }
+}

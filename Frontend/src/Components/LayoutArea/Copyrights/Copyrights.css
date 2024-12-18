@@ -1,0 +1,13 @@
+.Container {
+    text-align: center;
+    background-image: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0));
+    color: white;
+    font-size: 1.2em;
+}
+
+.CopyrightsText {
+    margin: 0;
+    color: #95a5a6;
+    font-weight: bold;
+    font-size: 1.25em;
+}

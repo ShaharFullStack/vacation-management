@@ -1,0 +1,251 @@
+.ReportsPage {
+    max-width: 1000px;
+    margin: var(--spacing-xl) auto;
+    padding: var(--spacing-xl);
+    background: var(--bg-overlay);
+    box-shadow: var(--shadow-md);
+    border-radius: var(--border-radius-md);
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    backdrop-filter: var(--blur-backdrop);
+}
+
+.ReportsPage h2 {
+    color: var(--primary-light);
+    opacity: 0.8;
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    font-weight: 600;
+    font-size: 2rem;
+    position: relative;
+    animation: slideIn var(--transition-slow) ease-out;
+}
+
+.ReportsPage h2::after {
+    content: '';
+    position: absolute;
+    bottom: calc(-1 * var(--spacing-sm));
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--primary-light);
+}
+
+.ReportsPage p {
+    text-align: center;
+    color: var(--text-primary);
+    opacity: 0;
+    animation: fadeIn var(--transition-normal) forwards 0.3s;
+}
+
+.ReportsPage table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--bg-primary);
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+    animation: tableSlideIn var(--transition-slow) ease-out;
+}
+
+.ReportsPage table thead {
+    background-color: var(--primary-dark);
+    color: var(--text-primary);
+}
+
+.ReportsPage table th {
+    padding: var(--spacing-lg);
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.ReportsPage table tbody tr {
+    transition: var(--transition-normal);
+}
+
+.ReportsPage table tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.ReportsPage table tbody tr:hover {
+    background-color: rgba(57, 255, 20, 0.1);
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
+.ReportsPage table td {
+    padding: var(--spacing-lg);
+    color: var(--text-primary);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Loading State */
+.ReportsPage p:first-of-type {
+    color: var(--primary-light);
+    font-weight: 500;
+    animation: pulse 1.5s infinite;
+}
+
+/* Button Container */
+.ReportsPage .button-container {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    margin-top: var(--spacing-xl);
+}
+
+/* Shared Button Styles */
+.ReportsPage .download-csv-button {
+background: var(--bg-primary);
+color: var(--text-primary);
+border: 1px solid var(--primary-light);
+border-radius: var(--border-radius-sm);
+padding: var(--spacing-md) var(--spacing-xl);
+font-size: 1rem;
+font-weight: bold;
+cursor: pointer;
+transition: var(--transition-normal);
+display: flex;
+align-items: center;
+gap: var(--spacing-sm);
+box-shadow: var(--shadow-sm);
+}
+
+/* CSV Button Specific */
+.ReportsPage .download-csv-button {
+    background: linear-gradient(45deg,
+            rgba(0, 240, 255, 0.1),
+            rgba(57, 255, 20, 0.1));
+}
+
+
+/* Hover Effects */
+.ReportsPage .download-csv-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    background: var(--gradient-primary);
+    border-color: transparent;
+}
+
+/* Active State */
+.ReportsPage .download-csv-button:active,
+.ReportsPage .download--button:active {
+    transform: translateY(1px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Disabled State */
+.ReportsPage .download-csv-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    background: var(--bg-primary);
+}
+
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes tableSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .ReportsPage {
+        padding: var(--spacing-md);
+        margin: var(--spacing-md);
+    }
+
+    .ReportsPage table,
+    .ReportsPage table tbody,
+    .ReportsPage table tr,
+    .ReportsPage table td {
+        display: block;
+        width: 100%;
+    }
+
+    .ReportsPage table thead {
+        display: none;
+    }
+
+    .ReportsPage table tr {
+        margin-bottom: var(--spacing-md);
+        border-bottom: 2px solid var(--primary-light);
+    }
+
+    .ReportsPage table td {
+        text-align: right;
+        padding: var(--spacing-sm);
+        position: relative;
+    }
+
+    .ReportsPage table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: var(--spacing-xs);
+        width: 45%;
+        padding-right: var(--spacing-sm);
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        color: var(--primary-light);
+    }
+
+    .ReportsPage .button-container {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .ReportsPage .download-csv-button {
+        width: 100%;
+        justify-content: center;
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+}

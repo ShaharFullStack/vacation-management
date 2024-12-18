@@ -1,0 +1,251 @@
+/* index.css או global.css */
+:root {
+    /* Color Palette */
+    --primary-light: #8ceeff;
+    --primary: #22cae4;
+    --primary-dark: #0e1026;
+    
+    --accent-light: #39ff14;
+    --accent: #16c60c;
+    --accent-dark: #0f8507;
+
+    /* Background Colors */
+    --bg-primary: rgba(14, 16, 38, 0.8);
+    --bg-secondary: rgba(14, 16, 38, 0.95);
+    --bg-overlay: rgba(14, 16, 38, 0.9);
+    
+    /* Text Colors */
+    --text-primary: #defeff;
+    --text-secondary: #b0bec5;
+    --text-accent: #39ff14;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(90deg, rgba(0, 240, 255, 1), rgba(57, 255, 20, 0.8));
+    --gradient-hover: linear-gradient(90deg, rgba(57, 255, 20, 1), rgba(0, 240, 255, 0.8));
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0, 240, 255, 0.1);
+    --shadow-md: 0 4px 15px rgba(0, 240, 255, 0.2), 0 4px 30px rgba(57, 255, 20, 0.1);
+    --shadow-lg: 0 8px 30px rgba(0, 240, 255, 0.4), 0 8px 60px rgba(57, 255, 20, 0.2);
+    
+    /* Text Shadows */
+    --text-shadow-sm: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    --text-shadow-md: 1px 1px 5px #ffffff;
+    --text-shadow-lg: 1px 1px 10px #000000, -1px -1px 5px #acf7ed;
+    
+    /* Borders */
+    --border-radius-sm: 8px;
+    --border-radius-md: 15px;
+    --border-radius-lg: 30px;
+    
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    
+    /* Filters */
+    --blur-backdrop: blur(10px);
+    
+    /* Z-index layers */
+    --z-dropdown: 100;
+    --z-header: 1000;
+    --z-modal: 2000;
+    --z-toast: 3000;
+}
+
+/* Global Styles */
+html, body, #root {
+    height: 100%;
+    width: 100%;
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image: url("./Assets/Images/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: var(--text-primary);
+}
+
+/* Typography */
+h1 {
+    font-size: clamp(40px, 5vw, 60px);
+    font-weight: bold;
+    text-shadow: var(--text-shadow-lg);
+    color: var(--primary);
+}
+
+h2 {
+    font-size: clamp(24px, 3vw, 30px);
+    font-weight: bold;
+    text-shadow: var(--text-shadow-md);
+    color: var(--text-primary);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+/* Material UI Global Overrides */
+.MuiTextField-root .MuiOutlinedInput-root {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    border-radius: var(--border-radius-sm);
+    transition: var(--transition-normal);
+}
+
+.MuiTextField-root .MuiOutlinedInput-root:hover {
+    background-color: var(--bg-secondary);
+    box-shadow: var(--shadow-md);
+}
+
+
+/* Material UI Overrides */
+.MuiInputBase-root {
+    background: rgba(14, 16, 38, 0.9) !important;
+    border-radius: var(--border-radius-sm) !important;
+    color: var(--text-primary) !important;
+    transition: var(--transition-normal) !important;
+}
+
+.MuiInputLabel-root {
+    color: var(--text-secondary) !important;
+    font-size: 1rem !important;
+}
+
+.MuiInputLabel-root.Mui-focused {
+    color: var(--primary-light) !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+    border-color: rgba(0, 240, 255, 0.3) !important;
+}
+
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(0, 240, 255, 0.5) !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: var(--primary-light) !important;
+}
+
+.MuiSelect-icon {
+    color: var(--text-secondary) !important;
+}
+
+/* Calendar Header Styles */
+.AddVacation .MuiPickersCalendarHeader-root {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+/* Calendar Background */
+.AddVacation .MuiPaper-root {
+    background-color: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Calendar Day Styles */
+.AddVacation .MuiPickersDay-root {
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+}
+
+/* Selected Day */
+.AddVacation .MuiPickersDay-root.Mui-selected {
+    background-color: var(--accent) !important;
+    color: white !important;
+}
+
+/* Hover State for Days */
+.AddVacation .MuiPickersDay-root:hover {
+    background-color: rgba(0, 240, 255, 0.2) !important;
+}
+
+/* Calendar Month/Year Selection */
+.AddVacation .MuiPickersYear-yearButton,
+.AddVacation .MuiPickersMonth-monthButton {
+    color: var(--text-primary);
+}
+
+/* Time Picker Styles */
+.AddVacation .MuiClock-clock {
+    background-color: var(--bg-secondary) !important;
+}
+
+.AddVacation .MuiClockPointer-root {
+    background-color: var(--accent) !important;
+}
+
+.AddVacation .MuiClockPointer-thumb {
+    border-color: var(--accent) !important;
+    background-color: var(--accent) !important;
+}
+
+/* Time Numbers */
+.AddVacation .MuiClockNumber-root {
+    color: var(--text-primary);
+}
+
+/* Selected Time Number */
+.AddVacation .MuiClockNumber-root.Mui-selected {
+    background-color: var(--accent) !important;
+    color: white !important;
+}
+
+/* Dialog Actions (OK/Cancel buttons) */
+.AddVacation .MuiDialogActions-root button {
+    color: var(--accent) !important;
+}
+
+/* Current Day Highlight */
+.AddVacation .MuiPickersDay-today {
+    border: 1px solid var(--accent) !important;
+}
+
+/* Menu Items */
+.MuiPaper-root.MuiMenu-paper {
+    background: rgba(14, 16, 38, 0.95) !important;
+    backdrop-filter: var(--blur-backdrop);
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    box-shadow: var(--shadow-md);
+}
+
+.MuiMenuItem-root {
+    color: var(--text-primary) !important;
+}
+
+.MuiMenuItem-root:hover {
+    background: rgba(0, 240, 255, 0.1) !important;
+}
+.MuiMenuItem-root.Mui-selected {
+    background: rgba(0, 240, 255, 0.2) !important;
+}
+
+/* Utility Classes */
+.glass-bg {
+    background: var(--bg-overlay);
+    backdrop-filter: var(--blur-backdrop);
+}
+
+.gradient-bg {
+    background: var(--gradient-primary);
+}
+
+.gradient-hover:hover {
+    background: var(--gradient-hover);
+}
+
+.shadow-hover:hover {
+    box-shadow: var(--shadow-lg);
+}

@@ -1,0 +1,129 @@
+/* Homw.css */
+
+.Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xl);
+}
+
+.Home h2 {
+    font-size: clamp(24px, 4vw, 32px);
+    font-weight: bold;
+    text-shadow: var(--text-shadow-lg);
+    color: var(--text-primary); 
+    transition: var(--transition-slow);
+}
+
+.homeLinks {
+    margin-top: var(--spacing-xl);
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.userGreet {
+    margin-top: var(--spacing-xl);
+    text-align: center;
+    font-size: clamp(28px, 5vw, 35px);
+    font-weight: bold;
+    color: transparent;
+    transition: var(--transition-slow);
+    animation: fadeIn var(--transition-slow) forwards;
+}
+
+.userGreet:hover {
+    text-shadow: var(--text-shadow-lg);
+    text-shadow: 0 0 6px #f33939;
+    color: var(--text-primary);
+}
+
+.link-div {
+    box-shadow: var(--shadow-md);
+    width: 200px;
+    height: 110px;
+    margin: var(--spacing-sm);
+    padding: var(--spacing-md);
+    border: 1px solid var(--primary-light);
+    border-radius: var(--border-radius-sm);
+    background: var(--bg-overlay);
+    transition: var(--transition-slow);
+    cursor: pointer;
+    backdrop-filter: var(--blur-backdrop);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.link-div:hover {
+    color: transparent;
+    font-weight: bold;
+    background: var(--bg-secondary);
+    border-color: var(--accent-light);
+    box-shadow: var(--shadow-lg);
+    transform: scale(1.15);
+}
+
+.link-div h2 {
+    margin: 0;
+    transition: var(--transition-normal);
+}
+
+.link-div:hover h2 {
+    color: var(--accent-light);
+}
+
+.home-logo {
+    margin-top: var(--spacing-xl);
+}
+
+.home-logo img {
+    transform: rotate(30deg);
+    width: 220px;
+    height: 205px;
+    border-radius: 50%;
+    mix-blend-mode: multiply;
+    transition: all 1.2s;
+}
+
+.home-logo img:hover {
+    transform: rotate(660deg);
+    cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Home {
+        padding: var(--spacing-md);
+    }
+    
+    .homeLinks {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .link-div {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .home-logo img {
+        width: 180px;
+        height: 165px;
+    }
+}

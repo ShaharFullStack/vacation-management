@@ -1,0 +1,4 @@
+node_modules
+Dockerfile
+*.postman_collection.json
+*.zip

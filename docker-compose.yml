@@ -1,0 +1,76 @@
+version: "3.9"
+
+services:
+
+  # Database Service
+  database-service:
+    build: ./Database
+    image: shaharmaoz/vacations-database-image:1.0
+    container_name: vacations-database-container
+    restart: unless-stopped
+
+    # Volume for persistent data storage
+    volumes:
+      - vacations-volume:/var/lib/mysql
+      - ./Backend/src:/app/src  
+      - /app/node_modules
+
+    environment:
+      MYSQL_ROOT_PASSWORD: Wonderland
+      MYSQL_USER: Alice
+      MYSQL_PASSWORD: Wonderland
+      MYSQL_DATABASE: vacatier
+
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 5s
+      retries: 24
+
+  # Backend Service
+  backend-service:
+    build: ./Backend
+    image: shaharmaoz/vacations-backend-image:1.0
+    container_name: vacations-backend-container
+    restart: unless-stopped
+
+    # Wait until the database-service is healthy
+    depends_on:
+      database-service:
+        condition: service_healthy
+
+    # Map port 4100 from container to host
+    ports:
+      - "4100:4100"
+
+    # Mount the src directory for hot reloading (if supported)
+    volumes:
+      - ./Backend/src:/app/src
+
+    environment:
+      MYSQL_HOST: database-service
+      MYSQL_USER: Alice
+      MYSQL_PASSWORD: Wonderland
+      MYSQL_DATABASE: vacatier
+
+  # Frontend Service
+  frontend-service:
+    build: ./Frontend
+    image: shaharmaoz/vacations-frontend-image:1.0
+    container_name: vacations-frontend-container
+    restart: unless-stopped
+
+    # Wait until backend-service is ready
+    depends_on:
+      - backend-service
+
+    # Map port 3000 from container to 3100 on host
+    ports:
+      - "3100:3000"
+
+    # Mount the src directory for hot reloading (if supported)
+    volumes:
+      - ./Frontend/src:/app/src
+
+volumes:
+  vacations-volume:

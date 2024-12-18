@@ -1,0 +1,177 @@
+.AddVacation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-xl);
+    
+}
+
+.AddVacation form {
+    width: 40%;
+    background: var(--bg-secondary);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-normal);
+}
+
+.AddVacation .MuiInputBase-root {
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-md);
+    box-shadow: inset 0 2px 5px rgba(0, 240, 255, 0.2);
+}
+
+.AddVacation .MuiInputLabel-root {
+    color: var(--text-secondary);
+}
+
+.AddVacation .MuiInputLabel-root.Mui-focused {
+    color: var(--primary-light);
+}
+
+.AddVacation .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(0, 240, 255, 0.4);
+}
+
+.AddVacation .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: rgb(6, 17, 18);
+}
+
+.AddVacation .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: var(--accent);
+}
+
+.AddVacation button {
+    background: var(--gradient-primary);
+    color: var(--text-primary) !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    padding: var(--spacing-lg) 0 !important;
+    border-radius: var(--border-radius-lg) !important;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-normal) !important;
+}
+
+.AddVacation button:hover {
+    background: var(--gradient-hover);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg);
+}
+
+.AddVacation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-xl);
+}
+
+.AddVacation form {
+    width: 40%;
+    background: var(--bg-secondary);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.date-input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.date-input label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.custom-datetime {
+    padding: 10px;
+    border: 1px solid rgba(0, 240, 255, 0.4);
+    border-radius: var(--border-radius-sm);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    width: 100%;
+}
+
+.custom-datetime:hover {
+    border-color: rgb(6, 17, 18);
+}
+
+.custom-datetime:focus {
+    border-color: var(--accent);
+    outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .AddVacation form {
+        width: 90%;
+        padding: var(--spacing-md);
+    }
+}
+
+
+.AddVacation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-xl);
+}
+
+.AddVacation form {
+    width: 40%;
+    background: var(--bg-secondary);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.date-input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.date-input label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.custom-datetime {
+    padding: 10px;
+    border: 1px solid rgba(0, 240, 255, 0.4);
+    border-radius: var(--border-radius-sm);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    width: 100%;
+}
+
+.custom-datetime:hover {
+    border-color: rgb(6, 17, 18);
+}
+
+.custom-datetime:focus {
+    border-color: var(--accent);
+    outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .AddVacation form {
+        width: 90%;
+        padding: var(--spacing-md);
+    }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .AddVacation form {
+        width: 90%;
+        padding: var(--spacing-md);
+    }
+    
+    .AddVacation button {
+        padding: var(--spacing-md) 0 !important;
+    }
+}

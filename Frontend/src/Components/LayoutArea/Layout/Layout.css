@@ -1,0 +1,86 @@
+
+/* Base Layout */
+.Layout {
+    overflow-x: hidden;
+    height: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    min-height: 100vh;
+}
+
+/* Typography */
+h1 {
+    font-size: clamp(40px, 5vw, 60px);
+    font-weight: bold;
+    text-shadow: var(--text-shadow-lg);
+    color: var(--primary);
+    margin: var(--spacing-md) 0;
+}
+
+h2 {
+    font-size: clamp(24px, 3vw, 30px);
+    font-weight: bold;
+    text-shadow: var(--text-shadow-md);
+    color: var(--text-primary);
+}
+
+/* Form Styles */
+.form-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin: 0 auto var(--spacing-lg);
+    background: var(--bg-secondary);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    width: min(100%, 600px);
+    backdrop-filter: var(--blur-backdrop);
+}
+
+/* Material UI Overrides */
+.MuiTextField-root .MuiOutlinedInput-root {
+    color: ---text-primary;
+    transition: var(--transition-normal);
+}
+
+.MuiTextField-root .MuiOutlinedInput-root:hover {
+    background-color: var(--bg-secondary);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--primary-light);
+}
+
+/* Utility Classes */
+.glass-bg {
+    background: var(--bg-overlay);
+    backdrop-filter: var(--blur-backdrop);
+}
+
+.text-gradient {
+    background: linear-gradient(to right, var(--primary-light), var(--accent-light));
+    color: transparent;
+}
+
+.shadow-hover {
+    transition: var(--transition-normal);
+}
+
+.shadow-hover:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .form-div {
+        width: 85%;
+        padding: var(--spacing-md);
+        margin: var(--spacing-sm);
+    }
+}

@@ -1,0 +1,40 @@
+.About {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #00032b;
+    line-height: 1.6;
+}
+
+.About h1 {
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgb(255, 77, 145);
+    color: #0e1026f1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.About h2 {
+    text-shadow: 2px 2px 4px rgb(255, 77, 145);
+    font-size: 1.8em;
+    margin-top: 20px;
+}
+
+.About p {
+    color: #2bff00;
+    font-size: 1.2em;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.About ul {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.About li {
+    margin-bottom: 10px;
+    list-style-type: disc;
+    color: #2bff00;
+}
