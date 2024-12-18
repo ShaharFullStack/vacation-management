@@ -55,13 +55,18 @@ Before you begin, ensure you have:
 ```bash
 # Clone the repository
 git clone https://github.com/ShaharFullStack/vacation-management.git
-
+```
+```bash
 # Navigate to backend
 cd backend
+```
 
+```bash
 # Install dependencies with superpowers! 🦸‍♂️
 npm install
+```
 
+```bash
 # Start the server
 npm start
 ```
@@ -70,10 +75,14 @@ npm start
 ```bash
 # Navigate to frontend
 cd frontend
+```
 
+```bash
 # Install dependencies
 npm install
+```
 
+```bash
 # Launch the application
 npm start
 ```
