@@ -52,38 +52,38 @@ Before you begin, ensure you have:
 ### 🔧 Installation
 
 #### Backend Setup
-```bash
 # Clone the repository
+```bash
 git clone https://github.com/ShaharFullStack/vacation-management.git
 ```
-```bash
 # Navigate to backend
-cd backend
+```bash
+cd Backend
 ```
 
-```bash
 # Install dependencies with superpowers! 🦸‍♂️
+```bash
 npm install
 ```
 
-```bash
 # Start the server
+```bash
 npm start
 ```
 
 #### Frontend Magic ✨
-```bash
 # Navigate to frontend
-cd frontend
+```bash
+cd Frontend
 ```
 
-```bash
 # Install dependencies
+```bash
 npm install
 ```
 
-```bash
 # Launch the application
+```bash
 npm start
 ```
 
