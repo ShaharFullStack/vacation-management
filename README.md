@@ -151,8 +151,8 @@ Questions? Ideas? Get in touch!
 
 <div align="center">
 
-🌟 **Star us on GitHub if you find this useful!** 🌟
+🌟 **Star me on GitHub if you find this useful!** 🌟
 
-Made with ❤️ by the Vacation Management Team
+Made with by Shahar Maoz
 
 </div>
